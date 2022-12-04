@@ -110,7 +110,7 @@ function configActivity(activityID){      // configura a atividade
 
 function getAnalyticsStd(activityID,InveniRAstdID){      // simula analiticas da atividade
 
-    var quantA = ['tem msg Discord','tem msg Slack', 'nº msg discord','nº msg slack','media msg discord','media msg slack']
+    var quantA = ['tem msg Discord?','tem msg Slack?', 'nº msg discord','nº msg slack','media msg discord','media msg slack']
     var qualA =['data ultima msg discord', 'data ultima msg slack']
 
     return [quantA, qualA]
