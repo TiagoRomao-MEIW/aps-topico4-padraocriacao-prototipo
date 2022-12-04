@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+<html lang="en">
+
+<head>
+  <title>Configuração da Atividade | Tiago Romão 75309</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+  integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+  <link rel="stylesheet" href="src/style.css">
+  <style>
+    html,
+body {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+body,
+div,
+h1,
+form,
+input,
+p {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 16px;
+  color: #666;
+}
+
+h1 {
+  padding: 10px 0;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+h2 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+h3 {
+
+  font-size: 18px;
+  font-weight: normal;
+  text-align: center;
+}
+
+p {
+  font-size: 12px;
+}
+
+hr {  
+  color: #a9a9a9;
+  opacity: 0.3;
+}
+
+.main-block {
+  max-width: 340px;
+  min-height: 250px;
+  padding: 10px 0;
+  margin: auto;
+  border-radius: 5px;
+  border: solid 1px #ccc;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, .31);
+  background: #ebebeb;
+}
+
+form {
+  margin: 0 30px;
+}
+
+
+label#icon {
+  margin: 0;
+  border-radius: 5px 0 0 5px;
+}
+
+input[type=text],
+input[type=password] {
+  width: calc(100% - 57px);
+  height: 36px;
+  margin: 13px 0 0 -5px;
+  padding-left: 10px;
+  border-radius: 0 5px 5px 0;
+  border: solid 1px #cbc9c9;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, .09);
+  background: #fff;
+}
+
+
+#icon {
+  display: inline-block;
+  padding: 9.3px 15px;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, .09);
+  background: #1c87c9;
+  color: #fff;
+  text-align: center;
+}
+
+.btn-block {
+  margin-top: 50px;
+  text-align: center;
+}
+
+button {
+  width: 100%;
+  padding: 10px 0;
+  margin: 10px auto;
+  border-radius: 5px;
+  border: none;
+  background: #1c87c9;
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+}
+
+button:hover {
+  background: #26a9e0;
+}
+  </style>
+</head>
+
+<body onload="receberParams()">
+
+  <!-- <script src="src/prototype.js"></script> -->
+  <div class="main-block">
+    <script src="src/prototype.js"></script>
+    
+    <h1 id="numAct">Configuração da Atividade</h1><br /><br />
+    <form action="">
+      <h2>Insira código do canal do Discord</h2>
+      <label id="icon" for="name"><i class="fab fa-discord"></i></label>
+      <input type="text" name="ChDiscord" id="ChDiscord" placeholder="código canal Discord" /><br />
+      
+      <h2><br /><br />Insira código do canal do Slack</h2>
+      <label id="icon" for="name"><i class="fab fa-slack"></i></label>
+      <input type="text" name="ChSlack" id="ChSlack" placeholder="código canal Slack" />
+      
+      <div class="btn-block"><input type="button" value="Submeter" onclick="configActivity();" /></div>
+    </form>
+  </div>
+
+  <div class="main-block">
+    <script src="src/prototype.js"></script>
+    
+    <h1 id="numAluno" onload="receberParams()">Página de atividade do aluno</h1><br /><br />
+    <form action="">
+      <h2 >Insira o seu username do Discord</h2>
+      <label id="icon" for="name"><i class="fab fa-discord"></i></label>
+      <input type="text" name="IdDiscord" id="IdDiscord" placeholder="username Discord" /><br />
+      
+      <h2><br /><br />Insira o seu username do Slack</h2>
+      <label id="icon" for="name"><i class="fab fa-slack"></i></label>
+      <input type="text" name="IdSlack" id="IdSlack" placeholder="username Slack" />
+      
+      <div class="btn-block"><input id="Prototype" type="button" value="Submeter" onclick="runPrototype();" /></div>
+
+      <!-- <div class="btn-block"><button type="submit" href="" onclick="runPrototype();">Submeter</button></div> -->
+    </form>
+  </div>
+  <p><br></br></p>
+
+  
+</body>
+<footer>
+
+</footer>
+<div class="main-block" id="StdProto" style="visibility:hidden; max-width: fit-content;">
+  <script src="src/prototype.js"></script>
+  <pre id="output" >oi oi
+    
+  </pre>
+  
+
+</div>
+
+</html>
+
