@@ -135,7 +135,7 @@ function runPrototype() { // executa padrão de criação Protótipo
     console.log('qualA')
     console.log(qualA)
 
-    var proto = new Activity('atividade 12345', 'numero aluno 75309', '#discord','#slack','ID Aluno Discord','ID Aluno Slack','tem msg Discord','tem msg Slack', 'nº msg discord','nº msg slack','media msg discord','media msg slack', 'data ultima msg discord', 'data ultima msg slack');
+    //var proto = new Activity('atividade 12345', 'numero aluno 75309', '#discord','#slack','ID Aluno Discord','ID Aluno Slack','tem msg Discord','tem msg Slack', 'nº msg discord','nº msg slack','media msg discord','media msg slack', 'data ultima msg discord', 'data ultima msg slack');
     var proto = new Activity(actID, stdID,json_params[0],json_params[1],IdStdDiscord,IdStdSlack,quantA[0],quantA[1],quantA[2],quantA[3],quantA[4],quantA[5], qualA[0],qualA[1]);
     var prototype = new ActivityPrototype(proto);
     var newActivity = prototype.clone();
